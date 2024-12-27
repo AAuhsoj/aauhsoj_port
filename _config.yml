@@ -12,7 +12,7 @@ baseurl: "/aauhsoj_port"  # 서브디렉토리 이름을 지정
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
 # username: Neumorphism
-username: Sol_JEONG
+username: Sol JEONG
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
 typing_text: Master Std. in IAI Lab
