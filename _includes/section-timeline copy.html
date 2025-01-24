@@ -24,13 +24,7 @@
               </span>
             </div>
             <div class="desc neumorphism-card" data-aos="zoom-in-right">
-              {% if event.subtitle-url %}
-                <a href="{{event.subtitle-url}}" target="_blank" rel="noreferrer">
-                  <span>{{event.subtitle}}</span>
-                </a>
-              {% else %}
-                {{event.subtitle}}
-              {% endif %}
+              {{event.subtitle}}
               {% if event.tags %}
                 <div class="tag-wrapper">
                   {% for tag in event.tags %}
@@ -58,13 +52,7 @@
               </span>
             </div>
             <div class="desc neumorphism-card" data-aos="zoom-in-left">
-              {% if event.subtitle-url %}
-                <a href="{{event.subtitle-url}}" target="_blank" rel="noreferrer">
-                  <span>{{event.subtitle}}</span>
-                </a>
-              {% else %}
-                {{event.subtitle}}
-              {% endif %}
+              {{event.subtitle}}
               {% if event.tags %}
                 <div class="tag-wrapper">
                   {% for tag in event.tags %}

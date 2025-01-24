@@ -17,45 +17,26 @@
 #     - tag: Rails
 #   timeline-side: right
 
-- title: airbnb
-  title-url: https://example.com/
-  date: Sep 2019 - Present
-  subtitle: Fullstack Developer
-  tags:
-    - tag: React
-    - tag: Javascript
-    - tag: Ruby
-    - tag: Rails
-  timeline-side: right
-
-- title: Google
-  title-url: https://example.com/
-  date: Mar 2019 - Sep 2019
-  subtitle: Software Engineer as Intern
-  tags:
-    - tag: Flutter
-    - tag: Dart
-    - tag: Keycloak
-  timeline-side: right
-
-- title: Super University
-  title-url: https://example.com/
-  date: 2017 - 2019
-  subtitle: M.Sc. Computer Science
+- title: Kyung-Hee University
+  title-url: https://www.khu.ac.kr/kor/user/main/view.do
+  date: Mar. 2017 - Feb. 2023
+  subtitle: B.A. Industrial and Management Systems Engineering
   timeline-side: left
 
-- title: Facebook
-  title-url: https://example.com/
-  date: Sep 2017 - Mar 2019
-  subtitle: Front-End Developer as Intern
+- title: KT Aivle School
+  title-url: https://aivle.kt.co.kr/home/main/indexMain
+  date: Oct. 2023 - Feb. 2024
+  subtitle: Fullstack Developer Boot Camp
   tags:
-    - tag: React
-    - tag: Node
-    - tag: Javascript
+    - tag: AI
+    - tag: Front
+    - tag: Back
   timeline-side: right
 
-- title: Super University
-  title-url: https://example.com/
-  date: 2014 - 2017
-  subtitle: B.A. Computer Science
+- title: IAI Lab. in Kyung-Hee University
+  title-url: http://bigdata21.khu.ac.kr/main/main.html
+  date: Mar 2023 - Present
+  subtitle: M.S. Big Data Analytics
+  subtitle-url: http://iai.khu.ac.kr/wiki/wiki.php/BPM%20Lab.
+  tags:
   timeline-side: left
