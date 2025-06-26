@@ -85,12 +85,24 @@ show_projects_card: true
 show_projects: true
 # projects_title: The will be displayed as the title of your projects
 projects_title: Projects
-# show_os_projects:
-# > setting this to true, will display your public projects on github
-# > setting this to false, will omit your public projects on github
-show_os_projects: true
-# os_projects_title: The will be displayed as the title of your open source projects
-os_projects_title: Open Source Projects
+# # show_os_projects:
+# # > setting this to true, will display your public projects on github
+# # > setting this to false, will omit your public projects on github
+# show_os_projects: true
+# # os_projects_title: The will be displayed as the title of your open source projects
+# os_projects_title: Open Source Projects
+
+# PUBLICATIONS SECTION
+# show_publications_card:
+# > setting this to true, will display the Publications section
+# > setting this to false, will omit the Publications section
+show_publications_card: true
+# show_publications:
+# > setting this to true, will display your listed publications in _data/publications.yml
+# > setting this to false, will omit your listed publications
+show_publications: true
+# publications_title: The will be displayed as the title in the Publications section
+publications_title: Publications
 
 # CONTACT SECTION
 # show_contact_card:

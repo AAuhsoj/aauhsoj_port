@@ -1,0 +1,111 @@
+{% if site.show_publications %}
+  <h1 class="title"><span>{{site.publications_title}}</span></h1>
+
+  <div class="publications-section">
+    <h2>International Journal</h2>
+    <div class="publications-wrapper">
+      {% for pub in site.data.publications.international_journal %}
+        <div class="publication neumorphism-card" data-aos="zoom-in-down">
+          <div class="publication-meta">
+            <div class="publication-authors">
+              {{ pub.authors | replace: 'Sol Jeong', '<b>Sol Jeong</b>' | replace: '정솔', '<b>정솔</b>' }}
+            </div>
+            {% if pub.link %}
+              <div class="publication-title">
+                <a href="{{pub.link}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
+              </div>
+            {% else %}
+              <div class="publication-title">{{pub.title}}</div>
+            {% endif %}
+            {% if pub.venue or pub.period %}
+              <div class="publication-venue-period">
+                {% if pub.venue %}<span class="venue"><i>{{pub.venue}}</i></span>{% endif %}
+                {% if pub.venue and pub.period %} &bull; {% endif %}
+                {% if pub.period %}<span class="period">{{pub.period}}</span>{% endif %}
+              </div>
+            {% endif %}
+          </div>
+          {% if pub.tags %}
+            <div class="tag-wrapper">
+              {% for tag in pub.tags %}
+                <span class="tag neumorphism-card">{{tag.tag}}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="publications-section">
+    <h2>International Conference</h2>
+    <div class="publications-wrapper">
+      {% for pub in site.data.publications.international_conference %}
+        <div class="publication neumorphism-card" data-aos="zoom-in-down">
+          <div class="publication-meta">
+            <div class="publication-authors">
+              {{ pub.authors | replace: 'Sol Jeong', '<b>Sol Jeong</b>' | replace: '정솔', '<b>정솔</b>' }}
+            </div>
+            {% if pub.link %}
+              <div class="publication-title">
+                <a href="{{pub.link}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
+              </div>
+            {% else %}
+              <div class="publication-title">{{pub.title}}</div>
+            {% endif %}
+            {% if pub.venue or pub.period %}
+              <div class="publication-venue-period">
+                {% if pub.venue %}<span class="venue"><i>{{pub.venue}}</i></span>{% endif %}
+                {% if pub.venue and pub.period %} &bull; {% endif %}
+                {% if pub.period %}<span class="period">{{pub.period}}</span>{% endif %}
+              </div>
+            {% endif %}
+          </div>
+          {% if pub.tags %}
+            <div class="tag-wrapper">
+              {% for tag in pub.tags %}
+                <span class="tag neumorphism-card">{{tag.tag}}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="publications-section">
+    <h2>Domestic Conference</h2>
+    <div class="publications-wrapper">
+      {% for pub in site.data.publications.domestic_conference %}
+        <div class="publication neumorphism-card" data-aos="zoom-in-down">
+          <div class="publication-meta">
+            <div class="publication-authors">
+              {{ pub.authors | replace: 'Sol Jeong', '<b>Sol Jeong</b>' | replace: '정솔', '<b>정솔</b>' }}
+            </div>
+            {% if pub.link %}
+              <div class="publication-title">
+                <a href="{{pub.link}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
+              </div>
+            {% else %}
+              <div class="publication-title">{{pub.title}}</div>
+            {% endif %}
+            {% if pub.venue or pub.period %}
+              <div class="publication-venue-period">
+                {% if pub.venue %}<span class="venue"><i>{{pub.venue}}</i></span>{% endif %}
+                {% if pub.venue and pub.period %} &bull; {% endif %}
+                {% if pub.period %}<span class="period">{{pub.period}}</span>{% endif %}
+              </div>
+            {% endif %}
+          </div>
+          {% if pub.tags %}
+            <div class="tag-wrapper">
+              {% for tag in pub.tags %}
+                <span class="tag neumorphism-card">{{tag.tag}}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

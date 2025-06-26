@@ -1,0 +1,50 @@
+# > authors: 저자 목록
+# > title: 논문 제목
+# > venue: 저널/컨퍼런스 이름
+# > period: 발표/출판 기간
+# > ack: 감사의 말 (선택사항)
+# > tags: 연구 분야/기술 태그
+# > link: 논문 링크 (선택사항)
+#
+# Example of a publication
+# - authors: "John Doe, Jane Smith"
+#   title: "Towards Multi-Domain Learning for Generalizable Video Anomaly Detection"
+#   venue: "NeurIPS 2024"
+#   period: "Dec 2024"
+#   ack: "(Ack: NSF Grant)"
+#   tags:
+#     - tag: Computer Vision
+#     - tag: Deep Learning
+#   link: https://arxiv.org/abs/example
+
+international_journal:
+  - authors: "Sol Jeong, and Jae-Yoon Jung*"
+    title: "example"
+    venue: "example"
+    period: "Nov 2024"
+    tags:
+      - tag: Transformer
+      - tag: Time-series Forecasting
+      - tag: Explainable AI
+    link: https://example.com/paper1
+
+international_conference:
+  - authors: "Sol Jeong, Minsik Kim, Myeong-Gu Kang, and Jae-Yoon Jung*"
+    title: "Wind power generation forecasting using explainable artificial intelligence"
+    venue: "The 7th International Conference on Computational Intelligence and Intelligent Systems (CIIS 2024)"
+    period: "Nov 2024"
+    tags:
+      - tag: Transformer
+      - tag: Time-series Forecasting
+      - tag: Explainable AI
+    link: https://example.com/paper1
+
+domestic_conference:
+  - authors: "정솔, 한영석, 정재윤*"
+    title: "TrackLens: 객체 추적 모델의 설명가능 기법 (TrackLens: Explanation on Object Tracking Models)"
+    venue: "대한산업공학회 / 한국경영과학회 / 한국시뮬레이션학회"
+    period: "Jun 2025"
+    tags:
+      - tag: Multipul Object Tracking
+      - tag: Explainable AI
+      - tag: Computer Vision

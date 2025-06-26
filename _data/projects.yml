@@ -13,21 +13,52 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: project X
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
+- title: 생성형 AI 및 스몰데이터 기반 온디바이스 AI 품질 검사 최적화 기술 개발
+  organization: "주력산업IT융합, 산업부"
+  period: "2024.7.1 ~ 2027.2.28"
+  keywords:
+    - Generative AI
+    - On-device AI
   tags:
-    - tag: MongoDB
-    - tag: Express
-    - tag: AngularJS
-    - tag: Node
+    - Quality Inspection
+    - Small Data
 
-- name: project Y
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
-  demo: https://example.com/
+- title: 설비 및 공정 통합 관제를 위한 제조 특화 SLM 개발
+  organization: "한화모멘텀"
+  period: "2025.3 ~ 2026.2"
+  keywords:
+    - SLM
+    - Manufacturing
   tags:
-    - tag: Python
-    - tag: Django
+    - Process Control
+    - Smart Factory
 
-- name: project Z
-  descr: "You can also set a project without demo link and no tags"
+- title: 머신러닝을 활용한 디스패칭 규칙 자동생성 및 고도화
+  organization: "CSPI"
+  period: "2024.10 ~ 2025.3"
+  keywords:
+    - Dispatching Rule
+    - Machine Learning
+  tags:
+    - Scheduling
+    - Optimization
+
+- title: 자율운항 성능 고도화를 위한 해상환경 학습 데이터셋 구축
+  organization: "국방벤처혁신기술지원사업, 방사청"
+  period: "2022.12.16 ~ 2024.12.15"
+  keywords:
+    - Autonomous Navigation
+    - Marine Dataset
+  tags:
+    - Defense
+    - Data Collection
+
+- title: (BK21 Four)지속가능 빅데이터 신사업 선도인력 교육연구단
+  organization: "4단계 BK21 사업, NRF/교육부"
+  period: "2020.9 ~ 2025.2"
+  keywords:
+    - Big Data
+    - Education
+  tags:
+    - Research
+    - Data Science
