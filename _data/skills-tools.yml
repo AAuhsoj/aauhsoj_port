@@ -5,6 +5,8 @@
 # - name: Git
 #   weight: 5
 
+
+
 - name: Git
   weight: 4
 
@@ -14,5 +16,30 @@
 - name: npm
   weight: 1
 
-- name: VS Code
+- name: Notion
   weight: 3
+
+- name: VS Code
+  weight: 4
+
+- name: Cursor AI
+  weight: 3
+
+- name: MySQL
+  weight: 3
+
+- name: PostgreSQL
+  weight: 3
+
+- name: MongoDB
+  weight: 1
+
+- name: Docker
+  weight: 1
+
+- name: AWS
+  weight: 3
+
+- name: GCP
+  weight: 2
+

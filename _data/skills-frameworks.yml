@@ -17,4 +17,5 @@
 - name: Django
   weight: 3
 
-
+- name: Langchain
+  weight: 3
