@@ -12,7 +12,7 @@
             </div>
             {% if pub.link %}
               <div class="publication-title">
-                <a href="{{pub.link}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
+                <a href="{{pub.link | prepend: site.baseurl}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
               </div>
             {% else %}
               <div class="publication-title">{{pub.title}}</div>
@@ -48,7 +48,7 @@
             </div>
             {% if pub.link %}
               <div class="publication-title">
-                <a href="{{pub.link}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
+                <a href="{{pub.link | prepend: site.baseurl}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
               </div>
             {% else %}
               <div class="publication-title">{{pub.title}}</div>
@@ -84,7 +84,7 @@
             </div>
             {% if pub.link %}
               <div class="publication-title">
-                <a href="{{pub.link}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
+                <a href="{{pub.link | prepend: site.baseurl}}" target="_blank" rel="noreferrer">{{pub.title}}</a>
               </div>
             {% else %}
               <div class="publication-title">{{pub.title}}</div>

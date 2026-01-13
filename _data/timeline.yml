@@ -18,10 +18,10 @@
 #   timeline-side: right
 
 - title: IAI Lab. in Kyung-Hee University
-  title-url: http://bigdata21.khu.ac.kr/main/main.html
-  date: Mar 2023 - Present
+  title-url: http://iai.khu.ac.kr/wiki/wiki.php/BPM%20Lab.
+  date: Mar. 2023 - Feb. 2026
   subtitle: M.S. Big Data Analytics
-  subtitle-url: http://iai.khu.ac.kr/wiki/wiki.php/BPM%20Lab.
+  subtitle-url: http://bigdata21.khu.ac.kr/main/main.html
   tags:
   timeline-side: left
 
@@ -39,6 +39,7 @@
   title-url: https://www.khu.ac.kr/kor/user/main/view.do
   date: Mar. 2017 - Feb. 2023
   subtitle: B.A. Industrial and Management Systems Engineering
+  subtitle-url: https://ie.khu.ac.kr/ie/user/main/view.do
   timeline-side: left
 
 

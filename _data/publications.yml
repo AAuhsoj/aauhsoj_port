@@ -18,33 +18,45 @@
 #   link: https://arxiv.org/abs/example
 
 international_journal:
-  - authors: "Sol Jeong, and Jae-Yoon Jung*"
-    title: "example"
-    venue: "example"
-    period: "Nov 2024"
+  - authors: "Sol Jeong and Jae-Yoon Jung*"
+    title: "An LLM-based Question Answering Framework for Industrial IoT Data Using Text-to-SQL"
+    venue: "Under preparation"
+    period: "in preparation"
+    link: /assets/papers/text_to_sql_2025.pdf
     tags:
-      - tag: Transformer
-      - tag: Time-series Forecasting
-      - tag: Explainable AI
-    link: https://example.com/paper1
+      - tag: LLM
+      - tag: Text-to-SQL
+      - tag: Industrial IoT
 
 international_conference:
   - authors: "Sol Jeong, Minsik Kim, Myeong-Gu Kang, and Jae-Yoon Jung*"
     title: "Wind power generation forecasting using explainable artificial intelligence"
     venue: "The 7th International Conference on Computational Intelligence and Intelligent Systems (CIIS 2024)"
     period: "Nov 2024"
+    link: /assets/papers/CIIS2024_WindXAI_Sol_NoScript.pdf
     tags:
       - tag: Transformer
       - tag: Time-series Forecasting
       - tag: Explainable AI
-    link: https://example.com/paper1
 
 domestic_conference:
-  - authors: "정솔, 한영석, 정재윤*"
-    title: "TrackLens: 객체 추적 모델의 설명가능 기법 (TrackLens: Explanation on Object Tracking Models)"
-    venue: "대한산업공학회 / 한국경영과학회 / 한국시뮬레이션학회"
-    period: "Jun 2025"
+  - authors: "정솔, 김민식, 강명구, 정재윤*"
+    title: "Text-to-SQL을 활용한 관계형 데이터베이스 연동 LLM 기반 질의응답 시스템"
+    venue: "2025 한국전자거래학회 추계학술대회"
+    period: "Dec 2025"
+    award: "학술대회 우수논문상 수상"
+    link: /assets/papers/coms_2025_text_to_sql.pdf
     tags:
-      - tag: Multipul Object Tracking
+      - tag: LLM
+      - tag: Text-to-SQL
+      - tag: Question Answering
+
+  - authors: "정솔, 한영석, 정재윤*"
+    title: "TrackLens: 객체 추적 모델의 설명가능 기법"
+    venue: "대한산업공학회/한국경영과학회/한국시뮬레이션학회 춘계공동학술대회"
+    period: "Jun 2025"
+    link: /assets/papers/tracklens_2025.pdf
+    tags:
+      - tag: Multiple Object Tracking
       - tag: Explainable AI
       - tag: Computer Vision
