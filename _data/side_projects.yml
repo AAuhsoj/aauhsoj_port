@@ -5,33 +5,88 @@
 # > link: 프로젝트 링크 (선택사항)
 # > keywords: 키워드
 # > tags: 사용 기술/도구
+# > detailedDescription: 상세 설명 (모달에 표시)
+# > image: 프로젝트 이미지 경로 (선택사항)
+# > features: 주요 기능/특징 리스트 (선택사항)
 
-- title: 예시 공모전 프로젝트
-  organization: "공모전 주관사"
-  period: "2024.3 ~ 2024.6"
-  keywords:
-    - Competition
-    - Web Development
-  tags:
-    - React
-    - Node.js
-
-- title: 수업 팀 프로젝트
-  organization: "경희대학교 산업경영공학과"
-  period: "2024.9 ~ 2024.12"
+- title: Newspeace - AI 기반 뉴스 감성 분석 서비스
+  organization: "KT AIVLE School"
+  period: "2023.7 ~ 2023.8"
+  link: "https://github.com/orgs/7MP-14/repositories"
+  presentation: "/assets/papers/AI_프로젝트 소개_정솔.pdf"
   keywords:
     - Team Project
-    - Data Analysis
+    - AI Service
+    - Sentiment Analysis
+  tags:
+    - Django
+    - React
+    - FinBERT
+    - AWS
+  detailedDescription: |
+    수많은 정보 속에서 뉴스 기사의 양적인 측면을 넘어 그 내용의 질적(긍정/부정)인 측면을 신속하게 파악하여
+    사용자에게 인사이트를 제공하는 AI 기반 뉴스 감성 분석 서비스입니다.
+
+    특정 키워드 검색 시 최근 일주일간의 기사를 분석하여 긍정/부정 비율과 관련 기사 목록을 제공하며,
+    KOSPI 100 종목을 대상으로 여론 변화 추이와 실시간 주가 시세를 비교할 수 있습니다.
+    구독한 키워드의 부정 기사 비율이 50% 이상일 경우 사용자에게 즉시 이메일 알림을 발송합니다.
+  features:
+    - FinBERT-SC 모델을 활용한 뉴스 감성 분석 (긍정/부정 분류)
+    - KeyBERT와 Kiwi 형태소 분석기를 통한 핵심 키워드 추출
+    - KOSPI 100 종목 대상 여론 변화 추이와 주가 시세 비교 시각화
+    - 키워드 구독 및 부정 기사 비율 50% 이상 시 이메일 알림
+    - 30분 단위 실시간 트렌드 분석 및 빈출 키워드 노출
+    - 카카오톡 챗봇을 통한 감성 분석 결과 및 주가 정보 제공
+    - Django REST API 기반 백엔드 및 React 기반 프론트엔드
+    - AWS(EC2, S3, RDS) 환경 배포 및 NGINX 서버 구성
+
+- title: Monte Carlo 시뮬레이션 기반 자산 수익률 분석
+  organization: "경희대학교 산업경영공학과"
+  period: "2022.9 ~ 2022.12"
+  link: "https://github.com/AAuhsoj/monte-carlo-portfolio"
+  presentation: "/assets/papers/금데분 프로젝트 ppt(음성x)_2017100923_정솔.pdf"
+  keywords:
+    - Course Project
+    - Financial Data Analysis
   tags:
     - Python
-    - ML
+    - Monte Carlo
+    - CVXPY
+  detailedDescription: |
+    Portfolio Visualizer를 참고하여 Fama-French 10개 산업군 포트폴리오 데이터를 활용한 Monte Carlo 시뮬레이션 시스템을 구현했습니다.
 
-- title: 개인 포트폴리오 사이트
+    다변량 정규분포 기반으로 수익률을 샘플링하고, 리밸런싱 주기별 비교 분석을 수행했습니다.
+    GVM(Global Variance Minimum) 포트폴리오 최적화를 CVXPY로 구현했으며,
+    MDD, VaR, CVaR 등 다양한 성과 지표를 계산하고 Rolling analysis 방식으로 백테스트를 수행했습니다.
+  features:
+    - Fama-French 라이브러리를 활용한 10개 산업군 포트폴리오 데이터 수집
+    - CVXPY를 통한 GVM 포트폴리오 최적화
+    - 다변량 정규분포 샘플링 기반 Monte Carlo 시뮬레이션
+    - 리밸런싱 주기별 비교 분석 (Not rebalanced / 1 month / r month)
+    - Sharpe Ratio, MDD, VaR, CVaR 등 성과 지표 계산
+    - Rolling analysis를 활용한 2021년 데이터 백테스트
+
+- title: 개인 포트폴리오 웹사이트
   period: "2024.1 ~ 진행중"
   link: "https://github.com/AAuhsoj/aauhsoj_port"
   keywords:
     - Portfolio
-    - Personal
+    - Personal Website
   tags:
     - Jekyll
     - SCSS
+    - JavaScript
+  detailedDescription: |
+    Jekyll 기반의 개인 포트폴리오 웹사이트를 구축했습니다.
+    Neumorphism 디자인 테마를 적용하여 현대적이고 세련된 UI를 구현했습니다.
+
+    GitHub Pages를 통해 배포하며, 연구 프로젝트, 논문, 사이드 프로젝트 등을
+    체계적으로 정리하여 보여줍니다. 반응형 디자인으로 모바일 환경에서도
+    최적화된 경험을 제공합니다.
+  features:
+    - Neumorphism 디자인 시스템 적용
+    - 반응형 웹 디자인 (모바일/태블릿/데스크탑)
+    - AOS(Animate On Scroll) 애니메이션 효과
+    - GitHub Pages를 통한 자동 배포
+    - 모듈화된 섹션 구조 (About, Skills, Timeline, Projects, Publications, Contact)
+    - SCSS를 활용한 효율적인 스타일 관리

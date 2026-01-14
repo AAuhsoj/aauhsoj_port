@@ -1,0 +1,53 @@
+# Side Projects - 외부 공모전, 수업, 개인 프로젝트
+# > title: 프로젝트 이름
+# > organization: 주관기관 또는 수업명
+# > period: 진행 기간
+# > description: 프로젝트 상세 설명 (모달에 표시, 선택사항)
+# > pdf_link: PDF 링크 (선택사항)
+# > github: GitHub 링크 (선택사항)
+# > link: 외부 링크 (선택사항)
+# > keywords: 키워드
+# > tags: 사용 기술/도구
+
+- title: 예시 공모전 프로젝트
+  organization: "공모전 주관사"
+  period: "2024.3 ~ 2024.6"
+  keywords:
+    - Competition
+    - Web Development
+  tags:
+    - React
+    - Node.js
+
+- title: Monte Carlo 시뮬레이션 기반 자산 수익률 분석
+  organization: "경희대학교 산업경영공학과 - 금융데이터분석"
+  period: "2022.9 ~ 2022.12"
+  description: |
+    Portfolio Visualizer를 참고하여 Fama-French 10개 산업군 포트폴리오 데이터를 활용한 Monte Carlo 시뮬레이션 시스템 구현.
+
+    **주요 기능:**
+    - CVXPY를 활용한 Global Variance Minimum(GVM) 포트폴리오 최적화
+    - 다변량 정규분포 기반 수익률 샘플링, 리밸런싱 주기별 비교 분석
+    - MDD, VaR, CVaR, Sharpe Ratio 등 성과 지표 계산 및 백테스트 수행
+    - Rolling analysis 방식으로 2021년 데이터 검증
+  pdf_link: "/assets/papers/금데분 프로젝트 ppt(음성x)_2017100923_정솔.pdf"
+  keywords:
+    - Team Project
+    - Financial Data Analysis
+  tags:
+    - Python
+    - Monte Carlo
+    - CVXPY
+    - Portfolio Optimization
+
+- title: 개인 포트폴리오 사이트
+  period: "2024.1 ~ 진행중"
+  description: |
+    Jekyll 기반 개인 포트폴리오 웹사이트 구축. Neumorphism 디자인을 적용하여 연구 프로젝트, 논문, Side Projects를 소개.
+  github: "https://github.com/AAuhsoj/aauhsoj_port"
+  keywords:
+    - Portfolio
+    - Personal
+  tags:
+    - Jekyll
+    - SCSS

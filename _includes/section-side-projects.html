@@ -2,14 +2,10 @@
   <h1 class="title"><span>{{site.side_projects_title}}</span></h1>
   <div class="projects-wrapper">
     {% for project in site.data.side_projects %}
-      <div class="project neumorphism-card" data-aos="zoom-in-down">
+      <div class="project neumorphism-card side-project-card" data-aos="zoom-in-down" data-project-index="{{ forloop.index0 }}">
         <div class="project-meta">
           <div class="project-title publication-title">
-            {% if project.link %}
-              <a href="{{ project.link }}" target="_blank" rel="noreferrer">{{ project.title }}</a>
-            {% else %}
-              {{ project.title }}
-            {% endif %}
+            {{ project.title }}
           </div>
           <div class="project-period-org" style="font-size:0.95rem;color:#aaa;margin-bottom:0.2rem;">
             {% if project.period %}<span class="period">{{ project.period }}</span>{% endif %}
@@ -32,4 +28,34 @@
       </div>
     {% endfor %}
   </div>
+
+  <!-- 모달 팝업 -->
+  <div id="side-project-modal" class="side-project-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div id="modal-details">
+        <!-- 프로젝트 상세 내용이 동적으로 삽입됩니다 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 프로젝트 데이터를 JavaScript에서 사용할 수 있도록 저장 -->
+  <script>
+    window.sideProjectsData = [
+      {% for project in site.data.side_projects %}
+      {
+        title: {{ project.title | jsonify }},
+        organization: {{ project.organization | jsonify }},
+        period: {{ project.period | jsonify }},
+        link: {{ project.link | jsonify }},
+        presentation: {{ project.presentation | jsonify }},
+        keywords: {{ project.keywords | jsonify }},
+        tags: {{ project.tags | jsonify }},
+        detailedDescription: {{ project.detailedDescription | jsonify }},
+        features: {{ project.features | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+  </script>
 {% endif %}

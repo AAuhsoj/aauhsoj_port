@@ -1,0 +1,62 @@
+{% if site.show_side_projects %}
+  <h1 class="title"><span>{{site.side_projects_title}}</span></h1>
+  <div class="projects-wrapper">
+    {% for project in site.data.side_projects %}
+      <div class="project neumorphism-card side-project-card" data-aos="zoom-in-down" data-project-index="{{ forloop.index0 }}">
+        <div class="project-meta">
+          <div class="project-title publication-title">
+            {{ project.title }}
+          </div>
+          <div class="project-period-org" style="font-size:0.95rem;color:#aaa;margin-bottom:0.2rem;">
+            {% if project.period %}<span class="period">{{ project.period }}</span>{% endif %}
+            {% if project.period and project.organization %} &bull; {% endif %}
+            {% if project.organization %}<span class="organization">{{ project.organization }}</span>{% endif %}
+          </div>
+          {% if project.keywords %}
+            <div class="project-keywords" style="margin-bottom:0.2rem;">
+              {{ project.keywords | join: ", " }}
+            </div>
+          {% endif %}
+        </div>
+        {% if project.tags %}
+          <div class="tag-wrapper">
+            {% for tag in project.tags %}
+              <span class="tag neumorphism-card">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="sideProjectModal" class="side-project-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content neumorphism-card-big">
+      <button class="modal-close">&times;</button>
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <div id="modalPeriodOrg" class="modal-period-org"></div>
+      <div id="modalDescription" class="modal-description"></div>
+      <div id="modalTags" class="modal-tags"></div>
+      <div id="modalLinks" class="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Project Data (JSON) -->
+  <script id="sideProjectsData" type="application/json">
+    [
+      {% for project in site.data.side_projects %}
+      {
+        "title": {{ project.title | jsonify }},
+        "organization": {{ project.organization | jsonify }},
+        "period": {{ project.period | jsonify }},
+        "description": {{ project.description | jsonify }},
+        "pdf_link": {{ project.pdf_link | prepend: site.baseurl | jsonify }},
+        "github": {{ project.github | jsonify }},
+        "link": {{ project.link | jsonify }},
+        "tags": {{ project.tags | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  </script>
+{% endif %}

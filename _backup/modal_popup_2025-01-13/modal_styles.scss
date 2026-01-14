@@ -1,0 +1,225 @@
+/* Side Projects Modal */
+.side-project-card {
+  .project-title {
+    color: $primary-color;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+.side-project-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+      animation: slideUp 0.3s ease forwards;
+    }
+  }
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: $bg-color;
+  border-radius: 2rem;
+  padding: 2rem;
+  z-index: 1001;
+  animation: slideUp 0.3s ease;
+
+  /* Custom scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: $text-color;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: $primary-color;
+  }
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: $font-weight-strong;
+  color: $primary-color;
+  margin-bottom: 0.5rem;
+  padding-right: 2rem; // Space for close button
+}
+
+.modal-period-org {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+
+  .period,
+  .organization {
+    display: inline;
+  }
+}
+
+.modal-description {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: $text-color;
+
+  strong {
+    color: $primary-color;
+    font-weight: $font-weight-strong;
+  }
+
+  br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
+  }
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  .tag {
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+.modal-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-link-btn {
+  background: linear-gradient(
+    145deg,
+    rgba(100, 100, 105, 0.15) 15%,
+    rgba(33, 33, 33, 0.4) 80%
+  );
+  border-radius: 0.5rem;
+  color: $text-color;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+
+  &:hover {
+    color: $primary-color;
+    transform: translateY(-2px);
+    box-shadow: -2px -2px 4px 0 rgba(250, 250, 250, 0.13),
+      2px 2px 4px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .side-project-modal {
+    .modal-content {
+      width: 95%;
+      padding: 1.5rem;
+      max-height: 90vh;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+    }
+
+    .modal-links {
+      flex-direction: column;
+    }
+
+    .modal-link-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -50,6 +50,16 @@ function scripts() {
     .pipe(gulp.dest('assets/js'));
 }
 
+function scriptsModal() {
+  return gulp
+    .src([ '_js/side-projects-modal.js' ])
+    .pipe(rename('side-projects-modal.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_site/assets/js'))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('assets/js'));
+}
+
 function scriptsVendors() {
   return gulp
     .src([ '_js/vendors/*.js' ])
@@ -115,7 +125,8 @@ function watchMarkup() {
 }
 
 function watchScripts() {
-  gulp.watch([ '_js/*.js' ], scripts);
+  gulp.watch([ '_js/app.js' ], scripts);
+  gulp.watch([ '_js/side-projects-modal.js' ], scriptsModal);
 }
 
 function watchStyles() {
@@ -126,9 +137,14 @@ function watch() {
   gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
 }
 
-var compile = gulp.parallel(styles, stylesVendors, scripts, scriptsVendors);
+var compile = gulp.parallel(styles, stylesVendors, scripts, scriptsModal, scriptsVendors);
 var serve = gulp.series(compile, jekyll, browserSyncServe);
 var watch = gulp.parallel(watchData, watchMarkup, watchScripts, watchStyles);
+
+/**
+ * Build task - just compile without serving
+ */
+gulp.task('build', compile);
 
 /**
  * Default task, running just `gulp` will compile the sass,

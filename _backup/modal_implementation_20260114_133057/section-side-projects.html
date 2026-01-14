@@ -1,0 +1,67 @@
+{% if site.show_side_projects %}
+  <h1 class="title"><span>{{site.side_projects_title}}</span></h1>
+  <div class="projects-wrapper">
+    {% for project in site.data.side_projects %}
+      <div class="project neumorphism-card side-project-card" data-aos="zoom-in-down" data-project-id="{{ forloop.index0 }}">
+        <div class="project-meta">
+          <div class="project-title publication-title">
+            {% if project.link %}
+              <a href="{{ project.link }}" target="_blank" rel="noreferrer">{{ project.title }}</a>
+            {% else %}
+              {{ project.title }}
+            {% endif %}
+          </div>
+          <div class="project-period-org" style="font-size:0.95rem;color:#aaa;margin-bottom:0.2rem;">
+            {% if project.period %}<span class="period">{{ project.period }}</span>{% endif %}
+            {% if project.period and project.organization %} &bull; {% endif %}
+            {% if project.organization %}<span class="organization">{{ project.organization }}</span>{% endif %}
+          </div>
+          {% if project.keywords %}
+            <div class="project-keywords" style="margin-bottom:0.2rem;">
+              {{ project.keywords | join: ", " }}
+            </div>
+          {% endif %}
+        </div>
+        {% if project.tags %}
+          <div class="tag-wrapper">
+            {% for tag in project.tags %}
+              <span class="tag neumorphism-card">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Modal Popup for Side Projects -->
+  <div id="side-project-popup" class="side-project-popup">
+    <div class="side-project-popup-content">
+      <span class="side-project-close-btn">&times;</span>
+      <div id="side-project-popup-details">
+        <!-- JavaScript will insert project details here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Data for JavaScript -->
+  <script id="side-projects-data" type="application/json">
+    [
+      {% for project in site.data.side_projects %}
+        {
+          "title": "{{ project.title | escape }}",
+          "titleKo": "{{ project.titleKo | escape }}",
+          "organization": "{{ project.organization | escape }}",
+          "organizationKo": "{{ project.organizationKo | escape }}",
+          "period": "{{ project.period | escape }}",
+          "periodKo": "{{ project.periodKo | escape }}",
+          "link": "{{ project.link }}",
+          "keywords": {{ project.keywords | jsonify }},
+          "tags": {{ project.tags | jsonify }},
+          "detailedDescription": {{ project.detailedDescription | jsonify }},
+          "detailedDescriptionKo": {{ project.detailedDescriptionKo | jsonify }},
+          "image": "{{ project.image }}"
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  </script>
+{% endif %}

@@ -1,0 +1,83 @@
+# Side Projects - 외부 공모전, 수업, 개인 프로젝트
+# > title: 프로젝트 이름
+# > organization: 주관기관 또는 수업명
+# > period: 진행 기간
+# > link: 프로젝트 링크 (선택사항)
+# > keywords: 키워드
+# > tags: 사용 기술/도구
+# > detailedDescription: 모달 팝업에 표시될 상세 설명 (선택사항)
+# > detailedDescriptionKo: 한국어 상세 설명 (선택사항)
+# > image: 프로젝트 이미지 경로 (선택사항)
+
+- title: Monte Carlo Simulation-based Asset Return Analysis
+  titleKo: Monte Carlo 시뮬레이션 기반 자산 수익률 분석
+  organization: "Kyung Hee University, Dept. of IME"
+  organizationKo: "경희대학교 산업경영공학과"
+  period: "2022.9 ~ 2022.12"
+  keywords:
+    - Team Project
+    - Financial Data Analysis
+  tags:
+    - Python
+    - Monte Carlo
+    - CVXPY
+  detailedDescription: |
+    Implemented a Monte Carlo simulation system using Fama-French 10 industry portfolio data, inspired by Portfolio Visualizer.
+
+    Key Features:
+    - Collected 10 industry portfolio data from the Fama-French library
+    - Portfolio optimization using CVXPY for Global Variance Minimum (GVM)
+    - Monte Carlo simulation through multivariate normal distribution-based return sampling
+    - Comparative analysis by rebalancing periods (no rebalancing / 1 month / r months)
+    - Calculated performance metrics including return, risk, Sharpe Ratio, MDD, VaR, and CVaR
+    - Performed backtest using rolling analysis methodology (2021 data)
+
+    Through this project, I deepened my understanding of financial data analysis, portfolio optimization techniques, and risk management metrics.
+  detailedDescriptionKo: |
+    Portfolio Visualizer를 참고하여 Fama-French 10개 산업군 포트폴리오 데이터를 활용한 Monte Carlo 시뮬레이션 시스템을 구현했습니다.
+
+    주요 기능:
+    - Fama-French 라이브러리에서 10개 산업군 포트폴리오 데이터 수집
+    - CVXPY를 활용한 Global Variance Minimum(GVM) 포트폴리오 최적화
+    - 다변량 정규분포 기반 수익률 샘플링을 통한 Monte Carlo 시뮬레이션
+    - 리밸런싱 주기별 비교 분석 (미리밸런싱 / 1개월 / r개월)
+    - 수익률, 위험, Sharpe Ratio, MDD, VaR, CVaR 등 성과 지표 계산
+    - Rolling analysis 방식의 백테스트 수행 (2021년 데이터)
+
+    이 프로젝트를 통해 금융 데이터 분석, 포트폴리오 최적화 기법, 그리고 리스크 관리 지표에 대한 이해를 심화할 수 있었습니다.
+
+- title: Personal Portfolio Website
+  titleKo: 개인 포트폴리오 사이트
+  period: "2024.1 ~ Present"
+  periodKo: "2024.1 ~ 진행중"
+  link: "https://github.com/AAuhsoj/aauhsoj_port"
+  keywords:
+    - Portfolio
+    - Personal
+  tags:
+    - Jekyll
+    - SCSS
+    - JavaScript
+  detailedDescription: |
+    A Jekyll-based personal portfolio website project. Implemented modern and sophisticated UI/UX by applying the Neumorphism design theme.
+
+    Key Features:
+    - Responsive web design supporting all environments (mobile/tablet/desktop)
+    - Composed of About Me, Skills, Timeline, Projects, Publications, and Contact sections
+    - Smooth scroll animations using AOS (Animate On Scroll) library
+    - Detailed project information via modal popups
+    - Free hosting through GitHub Pages
+
+    Continuously improving and updating with new projects and research outcomes.
+  detailedDescriptionKo: |
+    Jekyll 기반 개인 포트폴리오 웹사이트 프로젝트입니다. Neumorphism 디자인 테마를 적용하여 현대적이고 세련된 UI/UX를 구현했습니다.
+
+    주요 특징:
+    - 반응형 웹 디자인으로 모바일/태블릿/데스크톱 모든 환경 지원
+    - About Me, Skills, Timeline, Projects, Publications, Contact 섹션으로 구성
+    - AOS(Animate On Scroll) 라이브러리를 활용한 부드러운 스크롤 애니메이션
+    - 모달 팝업을 통한 프로젝트 상세 정보 제공
+    - GitHub Pages를 통한 무료 호스팅
+
+    지속적으로 개선 중이며, 새로운 프로젝트와 연구 성과를 업데이트하고 있습니다.
+  image: "/assets/img/portfolio-site.png"

@@ -1010,9 +1010,330 @@ a {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .projects-left-half,
   .projects-right-half {
     width: 100%;
+  }
+}
+
+/* Side Projects Modal Popup */
+
+.side-project-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+
+  &::after {
+    content: "클릭하여 자세히 보기 ▸";
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 7, 58, 0.2),
+                inset 2px 2px 6px rgba(0, 0, 0, 1),
+                inset -2px -2px 6px rgba(120, 120, 120, 1);
+    background: linear-gradient(
+      145deg,
+      rgba(120, 120, 125, 0.18) 15%,
+      rgba(43, 45, 47, 1) 80%
+    );
+
+    &::after {
+      opacity: 1;
+      color: $primary-color;
+    }
+  }
+
+  &:active {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 10px rgba(255, 7, 58, 0.15),
+                inset 3px 3px 4px rgba(0, 0, 0, 1),
+                inset -2px -2px 4px rgba(99, 99, 99, 1);
+  }
+}
+
+.side-project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $bg-color;
+  border-radius: 1.5rem;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+              inset 2px 2px 4px rgba(0, 0, 0, 0.3),
+              inset -2px -2px 4px rgba(99, 99, 99, 0.3);
+
+  /* 스크롤바 스타일링 */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: $text-color;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: $primary-color;
+    transform: scale(1.1);
+  }
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  font-weight: $font-weight-strong;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+  line-height: 1.4;
+}
+
+.modal-meta {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.modal-period,
+.modal-organization {
+  display: inline;
+}
+
+.modal-separator {
+  margin: 0 0.5rem;
+}
+
+.modal-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-keyword {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.modal-description {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.3rem;
+    color: $text-color;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 7, 58, 0.3);
+  }
+
+  p {
+    line-height: 1.8;
+    color: #ddd;
+    white-space: pre-wrap;
+  }
+}
+
+.modal-features {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.3rem;
+    color: $text-color;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 7, 58, 0.3);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+      color: #ddd;
+
+      &:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: $primary-color;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.modal-tech-stack {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.3rem;
+    color: $text-color;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 7, 58, 0.3);
+  }
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modal-tag {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.modal-link {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modal-github-link,
+.modal-presentation-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(
+    145deg,
+    rgba(100, 100, 105, 0.15) 15%,
+    rgba(33, 33, 33, 0.4) 80%
+  );
+  border-radius: 0.75rem;
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: -2px -2px 4px 0 rgba(250, 250, 250, 0.1),
+              2px 2px 4px 0 rgba(0, 0, 0, 0.4);
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    color: $text-color;
+    box-shadow: -1px -1px 2px 0 rgba(250, 250, 250, 0.15),
+                1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+
+    svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+/* 모바일 반응형 */
+@media only screen and (max-width: 768px) {
+  .side-project-card {
+    &::after {
+      bottom: 0.8rem;
+      right: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 2rem 1.5rem;
+    max-height: 90vh;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+    padding-right: 2.5rem;
+  }
+
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .modal-description h3,
+  .modal-features h3,
+  .modal-tech-stack h3 {
+    font-size: 1.1rem;
   }
 }
