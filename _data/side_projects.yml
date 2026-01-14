@@ -13,7 +13,7 @@
   organization: "KT AIVLE School"
   period: "2023.7 ~ 2023.8"
   link: "https://github.com/orgs/7MP-14/repositories"
-  presentation: "/assets/papers/AI_프로젝트 소개_정솔.pdf"
+  presentation: "/assets/papers/newspeace_ai_sentiment_analysis.pdf"
   keywords:
     - Team Project
     - AI Service
@@ -44,7 +44,7 @@
   organization: "경희대학교 산업경영공학과"
   period: "2022.9 ~ 2022.12"
   link: "https://github.com/AAuhsoj/monte-carlo-portfolio"
-  presentation: "/assets/papers/금데분 프로젝트 ppt(음성x)_2017100923_정솔.pdf"
+  presentation: "/assets/papers/monte_carlo_portfolio_analysis.pdf"
   keywords:
     - Course Project
     - Financial Data Analysis
