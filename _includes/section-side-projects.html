@@ -49,7 +49,7 @@
         organization: {{ project.organization | jsonify }},
         period: {{ project.period | jsonify }},
         link: {{ project.link | jsonify }},
-        presentation: {{ project.presentation | prepend: site.baseurl | jsonify }},
+        {% if project.presentation %}presentation: {{ project.presentation | prepend: site.baseurl | jsonify }},{% else %}presentation: null,{% endif %}
         keywords: {{ project.keywords | jsonify }},
         tags: {{ project.tags | jsonify }},
         detailedDescription: {{ project.detailedDescription | jsonify }},
